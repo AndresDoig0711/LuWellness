@@ -162,7 +162,15 @@ header {
 
 .nav {
     position: fixed;
+
     background: var(--clr-dark);
+    background-image: var(--url-main-img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+
+    text-decoration: overline;
+
     color: var(--clr-light);
     top: 0;
     bottom: 0;
@@ -334,6 +342,10 @@ header {
     text-align: center;
 }
 */
+
+
+
+
 .proposito {
     background-image: var(--url-main-img);
     background-position: center center;
@@ -432,7 +444,22 @@ header {
     box-shadow: var(--bs);
     max-width: 300px;
 }
-
+.section__title--about {
+    grid-column: title;
+    color: var(--clr-accent);
+    margin: 0.5em auto 1em;
+    text-align: center;
+}
+.section__title--about::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-dark);
+    opacity: 0.25;
+    color: var(--clr-accent);
+}
 @media (min-width: 600px) {
     .about-me {
         display: grid;
@@ -447,7 +474,9 @@ header {
     .section__title--about {
         grid-column: title;
         color: var(--clr-accent);
+        margin: 0.5em auto 1em;
     }
+    
 
     .section__subtitle--about {
         grid-column: 1 / -1;
@@ -458,7 +487,7 @@ header {
         padding-left: 1em;
         padding-right: calc(200px + 4em);
         color: var(--clr-dark);
-
+        font-weight: var(--fw-bold);
         
     }
 
