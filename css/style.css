@@ -565,4 +565,23 @@ header {
     padding: .5em;
 }
 
-
+.reveal {
+    position: relative;
+    transform: translate(0px, 100px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.reveal2 {
+    position: relative;
+    transform: translate(0px, 100px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.reveal2.active{
+    transform: translateY(0);
+    opacity: 1;
+}
